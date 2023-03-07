@@ -12,3 +12,14 @@ userEmail = (!userEmail.includes('@')) ? `not valid email <b>${userEmail}</b> (s
             `</b>${userEmail}</b>`;
 
 
+dateOfBirth = +prompt ('Enter your date of birth', "").replaceAll();
+today = new Date();
+thisYear = today.getFullYear();
+userAge = thisYear - dateOfBirth;
+
+document.write(`<ul>
+                  <li> Full name: <b>${userName} ${lastName}</b></li>
+                  <li> Email: ${userEmail}</li>
+                  <li> Age: <b> ${userAge} </b></li>
+                </ul>
+`);            
