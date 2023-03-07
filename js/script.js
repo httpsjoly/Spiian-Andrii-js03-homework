@@ -5,7 +5,7 @@ let lastName = prompt('What is your last name?', '').trim();
 lastName = lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
 
 console.log(userName, lastName);
-let userEmail = prompt('Enter your Email', "").replaceAll().toLowerCase();
+let userEmail = prompt('Enter your Email', "").replaceAll(/\s/g, "").toLowerCase();
 userEmail = (!userEmail.includes('@')) ? `not valid email <b>${userEmail}</b> (symbol @ not exist)`:
             (userEmail.startsWith('@')) ? `not valid email <b>${userEmail}</b> (symbol @ find in first place)`:
             (userEmail.endsWith('@')) ? `not valid email <b>${userEmail}</b> (symbol @ find in last place)`:
